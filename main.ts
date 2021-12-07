@@ -570,9 +570,9 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, ot
         . . . . 2 2 2 5 5 2 2 2 . . . . 
         . . . . . 2 2 2 2 2 2 . . . . . 
         . . . . . . 2 2 2 2 . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . . f f f . f f f . f f . . 
+        . . . . f . . . f . f . . f . . 
+        . . . . f f f . f f f . . f f . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `)) {
@@ -755,7 +755,7 @@ function New_Player () {
     pause(6000)
     game.showLongText("Click B to turn left, click again to turn back", DialogLayout.Bottom)
     pause(4000)
-    game.showLongText("Congratulations, now Go and defeat those enemies!", DialogLayout.Bottom)
+    game.showLongText("Congratulations, now Go and clean our earth", DialogLayout.Bottom)
     Main_Player.destroy()
     pause(100)
     Part_1()
@@ -763,22 +763,22 @@ function New_Player () {
 // This function is similar to enemy 3 and introduces enemy 4 with the projectiles moving at a faster speed.
 function Enemy4 () {
     Enemy_4 = sprites.create(img`
-        . . . . . . . . . . f f f f 5 5 
-        f f f f f f f f f f f f f 5 5 5 
-        . . . . . . . 7 . . . . 5 5 5 5 
-        . . . . . . . 7 . . . . f 5 5 5 
-        . . . . . . . 7 . . . 5 f 5 5 5 
-        . . . . . . . 7 . . c 5 f 6 5 5 
-        . . . . . . . 7 5 5 c 7 c 6 6 6 
-        c c c c f c f 5 5 7 c 7 c 7 6 6 
-        5 5 5 b f 7 f 7 a a 6 7 6 7 7 7 
-        . . . . . . . 7 6 6 6 a 6 7 7 7 
-        . . . . . . . 7 . . 6 6 f 7 7 7 
-        . . . . . . . 7 . . . 6 f a a 7 
-        . . . . . . . 7 . . . . 6 7 7 a 
-        . . . . . . . 7 . . . . 6 6 7 7 
-        f f f f f f f f f f f f f 6 6 6 
-        . . . . . . . . . . f f f f 6 6 
+        . . . . . . f . f . . . . . . . 
+        . . . . . . . f . . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . f . . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . f . . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . f . . . . . . . . 
+        . . . . . . . b b . . . . . . . 
+        . . . . . . . b b . . . . . . . 
+        . . . . . . b b b b . . . . . . 
+        . . . . . b b b b b b . . . . . 
+        . . . . . b c b c b c b . . . . 
+        . . . c b c b c b c b c b . . . 
+        . . c b c b c b c b c b c b . . 
+        . c b c b c b c b c b c b c b . 
         `, SpriteKind.Enemy)
     Enemy_4.setPosition(scene.screenWidth(), randint(10, 110))
     Enemy_4.setVelocity(-50, 0)
@@ -817,22 +817,22 @@ function Enemy4 () {
 // This function introduces the enemy1 and its health status.
 function Enemy1 () {
     Enemy_1 = sprites.create(img`
-        . . . . . . . . . . . . . . e e 
-        . . . . . . . . . . . . . e e e 
-        . . . . . . . . . . . . e e e e 
-        . . . . . . . . . . . . f e e e 
-        . . . . . . . . . . . e f e e e 
-        . . . . . . . . . . c e f 2 e e 
-        . . . . . . . . e e c 4 c 2 2 2 
-        c c c c f c f e e 4 c 4 c 4 2 2 
-        d d d b f 4 f 4 5 5 2 4 2 4 4 4 
-        . . . . . . . . 2 2 2 5 2 4 4 4 
-        . . . . . . . . . . 2 2 f 4 4 4 
-        . . . . . . . . . . . 2 f 5 5 4 
-        . . . . . . . . . . . . 2 4 4 5 
-        . . . . . . . . . . . . 2 2 4 4 
-        . . . . . . . . . . . . . 2 2 2 
-        . . . . . . . . . . . . . . 2 2 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . f f f f f . . . . . . 
+        . . . . f f 1 1 f f . . . . . . 
+        . . . f f 1 1 f f f . . . . . . 
+        . . . f 1 1 f f 2 f . . . . . . 
+        . . . f f f f 2 2 f . . . . . . 
+        . . . f 2 2 2 2 2 f . . . . . . 
+        . . . f 2 2 2 2 2 f . . . . . . 
+        . . . f 2 2 2 2 2 f . . . . . . 
+        . . . f 2 2 2 2 2 f . . . . . . 
+        . . . f f f f f f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
         `, SpriteKind.Enemy)
     Enemy_1.setPosition(scene.screenWidth(), randint(10, 110))
     Enemy_1.setVelocity(-25, 0)
@@ -844,22 +844,22 @@ function Enemy1 () {
 // This function introduces the third enemy and also has a different else if block for the enemies bullet projectiles.
 function Enemy3 () {
     Enemy_3 = sprites.create(img`
-        . . . . . . . . . . f f f f 8 8 
-        f f f f f f f f f f f f f 8 8 8 
-        . . . . . . . 9 . . . . 8 8 8 8 
-        . . . . . . . 9 . . . . f 8 8 8 
-        . . . . . . . 9 . . . 8 f 8 8 8 
-        . . . . . . . 9 . . c 8 f 2 8 8 
-        . . . . . . . 9 8 8 c 9 c 2 2 2 
-        c c c c f c f 8 8 9 c 9 c 9 2 2 
-        8 8 8 b f 9 f 9 a a 2 9 2 9 9 9 
-        . . . . . . . 9 2 2 2 a 2 9 9 9 
-        . . . . . . . 9 . . 2 2 f 9 9 9 
-        . . . . . . . 9 . . . 2 f a a 9 
-        . . . . . . . 9 . . . . 2 9 9 a 
-        . . . . . . . 9 . . . . 2 2 9 9 
-        f f f f f f f f f f f f f 2 2 2 
-        . . . . . . . . . . f f f f 2 2 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 2 . . . . . . . . 
+        . . . . . 2 2 2 2 . . . . . . . 
+        . . . . 2 2 4 4 2 2 . . . . . . 
+        . . . 2 2 4 4 5 4 2 2 2 . . . . 
+        . . . 2 4 4 5 5 5 4 4 2 . . . . 
+        . . . 2 4 4 5 5 5 5 4 2 2 . . . 
+        . . 2 2 4 5 5 5 5 5 4 4 2 2 . . 
+        . . 2 e e e e e e e e e e 2 . . 
+        . . 2 f f f f f f f f f 2 2 . . 
+        . . f f f f f f f f f f f f . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
         `, SpriteKind.Enemy)
     Enemy_3.setPosition(scene.screenWidth(), randint(10, 110))
     Enemy_3.setVelocity(-25, 0)
@@ -1062,22 +1062,22 @@ function Final_Boss () {
 // This function introduces the second enemy and its status bar and health.
 function Enemy2 () {
     Enemy_2 = sprites.create(img`
-        . . . . . . . . . . . . . . 8 8 
-        . . . . . . . . . . . . . 8 8 8 
-        . . . . . . . . . . . . 8 8 8 8 
-        . . . . . . . . . . . . f 8 8 8 
-        . . . . . . . . . . . 8 f 8 8 8 
-        . . . . . . . . . . c 8 f 7 8 8 
-        . . . . . . . . 8 8 c 9 c 7 7 7 
-        c c c c f c f 8 8 9 c 9 c 9 7 7 
-        8 8 8 b f 9 f 9 a a 7 9 7 9 9 9 
-        . . . . . . . . 7 7 7 a 7 9 9 9 
-        . . . . . . . . . . 7 7 f 9 9 9 
-        . . . . . . . . . . . 7 f a a 9 
-        . . . . . . . . . . . . 7 9 9 a 
-        . . . . . . . . . . . . 7 7 9 9 
-        . . . . . . . . . . . . . 7 7 7 
-        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . . . . . 
+        . . . . f f f f . . . . . . . . 
+        . . . f f 1 1 f . . f f f f f . 
+        . . . f 1 1 1 f f f f 1 1 1 f . 
+        . . . f 1 . 1 1 f f 1 1 . 1 f . 
+        . . f f 1 . . 1 f 1 1 . 1 1 f . 
+        . . f 1 1 . . 1 f 1 . 1 1 f f . 
+        . . f 1 1 1 1 1 1 1 1 1 f f . . 
+        . . f 1 6 6 6 6 6 6 6 1 f . . . 
+        . . f 1 6 6 6 6 6 6 6 1 f . . . 
+        . . f 1 6 6 6 6 6 6 1 1 f . . . 
+        . . f f 1 6 6 6 6 1 1 f f . . . 
+        . . . f 1 1 6 6 1 1 f f . . . . 
+        . . . f f 1 1 1 1 f f . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
         `, SpriteKind.Enemy)
     Enemy_2.setPosition(scene.screenWidth(), randint(10, 110))
     Enemy_2.setVelocity(-50, 0)
@@ -1228,85 +1228,85 @@ statusbars.onZero(StatusBarKind.Health, function (status) {
 // This overlap code block is for when the enemy ships overlap with the mainplayer plane. It uses the different sprites to determine what status bar to alter and by how much with a large if, else statement block.
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
     if (sprite.image.equals(img`
-        . . . . . . . . . . . . . . e e 
-        . . . . . . . . . . . . . e e e 
-        . . . . . . . . . . . . e e e e 
-        . . . . . . . . . . . . f e e e 
-        . . . . . . . . . . . e f e e e 
-        . . . . . . . . . . c e f 2 e e 
-        . . . . . . . . e e c 4 c 2 2 2 
-        c c c c f c f e e 4 c 4 c 4 2 2 
-        d d d b f 4 f 4 5 5 2 4 2 4 4 4 
-        . . . . . . . . 2 2 2 5 2 4 4 4 
-        . . . . . . . . . . 2 2 f 4 4 4 
-        . . . . . . . . . . . 2 f 5 5 4 
-        . . . . . . . . . . . . 2 4 4 5 
-        . . . . . . . . . . . . 2 2 4 4 
-        . . . . . . . . . . . . . 2 2 2 
-        . . . . . . . . . . . . . . 2 2 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . f f f f f . . . . . . 
+        . . . . f f 1 1 f f . . . . . . 
+        . . . f f 1 1 f f f . . . . . . 
+        . . . f 1 1 f f 2 f . . . . . . 
+        . . . f f f f 2 2 f . . . . . . 
+        . . . f 2 2 2 2 2 f . . . . . . 
+        . . . f 2 2 2 2 2 f . . . . . . 
+        . . . f 2 2 2 2 2 f . . . . . . 
+        . . . f 2 2 2 2 2 f . . . . . . 
+        . . . f f f f f f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
         `)) {
         Enemy_1_status_bar.value += -120
         sprite.destroy(effects.disintegrate, 500)
         statusbars.getStatusBarAttachedTo(StatusBarKind.Health, otherSprite).value += -20
     } else if (sprite.image.equals(img`
-        . . . . . . . . . . . . . . 8 8 
-        . . . . . . . . . . . . . 8 8 8 
-        . . . . . . . . . . . . 8 8 8 8 
-        . . . . . . . . . . . . f 8 8 8 
-        . . . . . . . . . . . 8 f 8 8 8 
-        . . . . . . . . . . c 8 f 7 8 8 
-        . . . . . . . . 8 8 c 9 c 7 7 7 
-        c c c c f c f 8 8 9 c 9 c 9 7 7 
-        8 8 8 b f 9 f 9 a a 7 9 7 9 9 9 
-        . . . . . . . . 7 7 7 a 7 9 9 9 
-        . . . . . . . . . . 7 7 f 9 9 9 
-        . . . . . . . . . . . 7 f a a 9 
-        . . . . . . . . . . . . 7 9 9 a 
-        . . . . . . . . . . . . 7 7 9 9 
-        . . . . . . . . . . . . . 7 7 7 
-        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . . . . . 
+        . . . . f f f f . . . . . . . . 
+        . . . f f 1 1 f . . f f f f f . 
+        . . . f 1 1 1 f f f f 1 1 1 f . 
+        . . . f 1 . 1 1 f f 1 1 . 1 f . 
+        . . f f 1 . . 1 f 1 1 . 1 1 f . 
+        . . f 1 1 . . 1 f 1 . 1 1 f f . 
+        . . f 1 1 1 1 1 1 1 1 1 f f . . 
+        . . f 1 6 6 6 6 6 6 6 1 f . . . 
+        . . f 1 6 6 6 6 6 6 6 1 f . . . 
+        . . f 1 6 6 6 6 6 6 1 1 f . . . 
+        . . f f 1 6 6 6 6 1 1 f f . . . 
+        . . . f 1 1 6 6 1 1 f f . . . . 
+        . . . f f 1 1 1 1 f f . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
         `)) {
         Enemy_2_status_bar.value += -100
         sprite.destroy(effects.disintegrate, 500)
         statusbars.getStatusBarAttachedTo(StatusBarKind.Health, otherSprite).value += -20
     } else if (sprite.image.equals(img`
-        . . . . . . . . . . f f f f 8 8 
-        f f f f f f f f f f f f f 8 8 8 
-        . . . . . . . 9 . . . . 8 8 8 8 
-        . . . . . . . 9 . . . . f 8 8 8 
-        . . . . . . . 9 . . . 8 f 8 8 8 
-        . . . . . . . 9 . . c 8 f 2 8 8 
-        . . . . . . . 9 8 8 c 9 c 2 2 2 
-        c c c c f c f 8 8 9 c 9 c 9 2 2 
-        8 8 8 b f 9 f 9 a a 2 9 2 9 9 9 
-        . . . . . . . 9 2 2 2 a 2 9 9 9 
-        . . . . . . . 9 . . 2 2 f 9 9 9 
-        . . . . . . . 9 . . . 2 f a a 9 
-        . . . . . . . 9 . . . . 2 9 9 a 
-        . . . . . . . 9 . . . . 2 2 9 9 
-        f f f f f f f f f f f f f 2 2 2 
-        . . . . . . . . . . f f f f 2 2 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 2 . . . . . . . . 
+        . . . . . 2 2 2 2 . . . . . . . 
+        . . . . 2 2 4 4 2 2 . . . . . . 
+        . . . 2 2 4 4 5 4 2 2 2 . . . . 
+        . . . 2 4 4 5 5 5 4 4 2 . . . . 
+        . . . 2 4 4 5 5 5 5 4 2 2 . . . 
+        . . 2 2 4 5 5 5 5 5 4 4 2 2 . . 
+        . . 2 e e e e e e e e e e 2 . . 
+        . . 2 f f f f f f f f f 2 2 . . 
+        . . f f f f f f f f f f f f . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
         `)) {
         Enemy_3_status_bar.value += -120
         sprite.destroy(effects.disintegrate, 500)
         statusbars.getStatusBarAttachedTo(StatusBarKind.Health, otherSprite).value += -20
     } else if (sprite.image.equals(img`
-        . . . . . . . . . . f f f f 5 5 
-        f f f f f f f f f f f f f 5 5 5 
-        . . . . . . . 7 . . . . 5 5 5 5 
-        . . . . . . . 7 . . . . f 5 5 5 
-        . . . . . . . 7 . . . 5 f 5 5 5 
-        . . . . . . . 7 . . c 5 f 6 5 5 
-        . . . . . . . 7 5 5 c 7 c 6 6 6 
-        c c c c f c f 5 5 7 c 7 c 7 6 6 
-        5 5 5 b f 7 f 7 a a 6 7 6 7 7 7 
-        . . . . . . . 7 6 6 6 a 6 7 7 7 
-        . . . . . . . 7 . . 6 6 f 7 7 7 
-        . . . . . . . 7 . . . 6 f a a 7 
-        . . . . . . . 7 . . . . 6 7 7 a 
-        . . . . . . . 7 . . . . 6 6 7 7 
-        f f f f f f f f f f f f f 6 6 6 
-        . . . . . . . . . . f f f f 6 6 
+        . . . . . . f . f . . . . . . . 
+        . . . . . . . f . . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . f . . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . f . . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . f . . . . . . . . 
+        . . . . . . . b b . . . . . . . 
+        . . . . . . . b b . . . . . . . 
+        . . . . . . b b b b . . . . . . 
+        . . . . . b b b b b b . . . . . 
+        . . . . . b c b c b c b . . . . 
+        . . . c b c b c b c b c b . . . 
+        . . c b c b c b c b c b c b . . 
+        . c b c b c b c b c b c b c b . 
         `)) {
         Enemy_4_status_bar.value += -100
         sprite.destroy(effects.disintegrate, 500)
@@ -1592,7 +1592,7 @@ let Enemy_4: Sprite = null
 let players_bullets: Sprite = null
 let Main_Player: Sprite = null
 let turn_right = false
-if (game.ask("Do you know how to play ", "GALGA")) {
+if (game.ask("Do you know how to play ", "Trash Cleaner")) {
     Part_1()
 } else {
     New_Player()
